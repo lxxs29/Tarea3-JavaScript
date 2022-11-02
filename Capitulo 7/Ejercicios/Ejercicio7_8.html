@@ -1,0 +1,83 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.8 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.8</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.8</strong> Ejercicio | ¿Qu&eacute; est&aacute; mal en la siguiente instrucci&oacute;n de repetici&oacute;n while?</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            
+            <img src="img/ejercicio7_8.png" alt="imagen del codigo" class="img-prueba">
+
+            <ul>
+                <!-- Respuesta -->
+                <li><p><strong>E</strong>l valor de la variable z nunca se cambia en el cuerpo de la instricci&oacute;n while. Por lo tanto, si la condici&oacute;n de continuaci&oacute;n del ciclo es verdadera, se crea un ciclo infinito. Para evitar que esto ocurra, z debe decrementarse de manera que en un momento dado se vuelva menor que 0.</p></li>
+            </ul>
+
+            
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* 
+                while(z >= 0)
+                    suma += z;
+                */
+            </script>
+        </div>
+    </body>
+</html>

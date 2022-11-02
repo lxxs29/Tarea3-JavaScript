@@ -1,0 +1,93 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.15 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.15</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.15</strong> Ejercicio | El proceso de encontrar el valor <i>más grande</i>, (es decir el más grande de un grupo de valores) se utiliza con frecuencia en aplicaciones de computadora. Por ejemplo, una secuencia de datos para determinar el ganador de un concurso de ventas recibe como entrada el número de unidades vendidads por cada vendedor. El que hay vendido más unidades es el que gana el concurso. Escriba un algoritmo y despues en secuencia de comandos que reciba como entrada una serie de 10 números de un sólo dígito como caracter, determine el mayor número y produzca un mensaje que muestre el número más grande.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">          
+
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let numero = 0;
+                let contador = 1;
+                let mayor = 0;
+
+                /* convertir a entero */
+                numero = parseInt(numero);
+                contador = parseInt(contador);
+                mayor = parseInt(mayor);
+
+                /* pedir datos al usuario */
+                mayor = window.prompt("Escribe el número "+contador++ +": ");
+                
+                while( 10 >= contador){
+                    numero = window.prompt("Escrive el número "+contador++ +": ");
+                    /* validar numero mayores */
+                    if( numero > mayor ){ mayor = numero; }
+                }
+
+                /* escribir en el documento de HTML5 */
+                document.writeln("El número mayor es: "+mayor);
+
+            </script>
+        </div>
+    </body>
+</html>

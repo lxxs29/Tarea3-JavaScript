@@ -1,0 +1,152 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.22 -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="styles/styles-ejer.css">        
+         <title>Ejercicio 7.22</title>
+ 
+         <style type="text/css">
+             .img-prueba{
+                 position: relative;
+                 display: block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 350px;
+             }
+             h3{
+                 position: relative;
+                 margin-left: 45px;
+             }
+             table{
+                 border: black solid 1px;
+                 color: black;
+                 position: relative;
+                 left: 23em;
+             }
+             td, th {
+                 border: black solid 1px;
+             }
+         </style>
+         <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+ 
+     </head>
+     <body>
+         
+         <!-- Banner para mostrar el titulo -->
+         <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a> 
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+             <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+         </header>
+         <!-- Contenedor de información de la sección -->
+         <section class="cont-1">
+             <p><strong>7.22</strong> Ejercicio | Una compañia desea transmitir datos por teléfono, pero le preocupa que sus teléfonos puedan estar intervenidos. Todos sus datos se transmiten como enteros de cuatro digitos. La compañia le ha pedido a es usted que escriba una secuencia de comandos que cifre sus datos, de modo que puedan transmitirse en forma más segura.
+                Su secuencia de comandos debe leer un entero de cuatro digitos introducido por el usuario y cifrarlo de la siguiente manera: 
+                
+                reemplace cada digito con (el resultado de sumar 7 al digito) MÓDULO 10.
+                 Luego intercambie el primer digito con el tercero, e intercambie el segundo digito con el cuarto.
+                 Despues imprima el entero cifrado. 
+                 
+                 Escriba una secuencia de comandos separada que reciba como entrada de un entero de cuatro digitos cifrado, y que lo descifre para formar el numero original.
+.
+         </section> 
+         <!-- ================================================================ -->
+ 
+         <!-- Custionario -->
+         <div class="cont-2">
+             
+             <!-- Desarrollo en JavaScript  -->
+             <script>
+                function Encriptar(){
+                    /* variable */
+                    let n1 = 0;     // Digito 1
+                    let n2 = 0;     // Digito 2
+                    let n3 = 0;     // Digito 3
+                    let n4 = 0;     // Digito 4
+                    let entradaNumeros;  
+                    let numerosEncriptados; 
+                    /* pedir el numero al usuario */
+                    entradaNumeros = prompt("Ingresa un número de 4 dígitos: ");
+                    
+                    /* convertir a entero */
+                    let numero = parseInt(entradaNumeros);
+                    
+                    /* asignar cada digito a la variable correspondiente */
+                    n1 = parseInt((numero / 1000 + 7) % 10);
+                    n2 = parseInt((numero % 1000 / 100 + 7 ) % 10);
+                    n3 = parseInt((numero % 1000 % 100 / 10 + 7) % 10);
+                    n4 = parseInt((numero % 1000 % 100 / 10 + 7) % 10);
+                    
+                    numerosEncriptados = "El número encriptado es " + n1 + n2 + n3 + n4;
+                    
+                    return document.writeln(numerosEncriptados);
+                }
+                
+                function Desencriptar(){
+                    
+                    let entradaNumeros;
+                    let aux;
+                    let numerosDesencriptados;
+                    
+                    entradaNumeros = window.prompt("Ingresa un número de 4 dígitos: ")
+                    
+                    let numero = entradaNumeros;
+                    let n1 = 0;     // Digito 1
+                    let n2 = 0;     // Digito 2
+                    let n3 = 0;     // Digito 3
+                    let n4 = 0;     // Digito 4
+                    
+                    n1 = parseInt(numero / 1000);
+                    n2 = parseInt(numero % 1000 / 100);
+                    n3 = parseInt(numero % 1000 % 100 / 10);
+                    n4 = parseInt(numero % 1000 % 100 % 10);
+
+                    aux = parseInt((n1 + 3) % 10);
+                    n1 = parseInt((n3 + 3) % 10);
+                    n3 = aux;
+                    aux = parseInt((n2 + 3) % 10);
+                    n2 = parseInt((n4 + 3) % 10);
+                    n4 = aux;
+
+                    numerosDesencriptados = n1 * 1000 + n2 * 100 + n3 * 10 + n4;
+
+                    return document.writeln("<br>El número desencriptado es " + numerosDesencriptados);
+
+                }
+                Encriptar();
+                Desencriptar();
+             </script>
+        </div>
+         <!--              
+                         |>
+                     ___|____
+                     \_____/
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     </body> 
+ </html>

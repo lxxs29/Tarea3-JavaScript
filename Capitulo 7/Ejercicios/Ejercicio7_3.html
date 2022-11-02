@@ -1,0 +1,112 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.3 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-cuestionario.css">        
+        <title>Ejercicio 7.3</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.3</strong> Ejercicio | Escriba instrucciones en JavaScript para realizar cada una de las siguientes tareas: </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Asignar la suma de x & y a z, e incrementar el valor de x en 1 despu&eacute;s del c&aacute;lculo. Usar solo una instrucci&oacute;n.
+                    </p>
+                </li>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Evaluar si el valor de la variable cuenta es mayor que 10. De ser as&iacute;, imprimir "Cuanta es mayor que".
+                    </p>
+                </li>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> Decrementar la variable x en 1, luego restarla a a variable total. Usar solo una instrucci&oacute;n.
+                    </p>
+                </li>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> Calcular el residuo despu&eacute;s de dividir q entre divisoor y asignar el resultado a q.
+                    </p>
+                </li>
+               
+            </ul>
+
+            <!-- Desarrollo en JavaScript -->
+            <script>
+               /* variables */
+                let x, y, z, cuenta, q, divisor, total;
+                
+                /* a) */
+                z = x++ + y;
+                /* b) */
+                if (cuenta > 10){
+                    document.writeln("Cuenta es mayor que 10");
+                }
+                /* c) */
+                total -= --x;
+                /* d) */
+                q %= divisor; 
+            </script>
+
+            <img src="img/ejercicio7_3.png" alt="referencia" class="img-prueba">
+
+        </div>
+    </body>
+</html>

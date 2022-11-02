@@ -1,0 +1,144 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.13 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.13</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: #b2b2b2 1px solid;
+                text-align: center;
+            }
+            td, th {
+                border: black 1px solid;
+            }
+
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.13</strong> Ejercicio | Una empresa grande paga a sus vendedores mediante comisiones. Los vendedores reciben $200 por semana, más el 9 por ciento de sus ventas brutas durante esa semana. Por ejemplo, un vendedor que vende $5000 de mercancía en una semanda, recibe $200 más el 9 por ciento de 5000, o un total de $65. Usted acaba de recibir una lista de los artículos vendidos por cada vendedor. Los valores de estos artículos son los siguites: .</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+
+            <table>
+                <tr>
+                    <th>Artículo</th>
+                    <th>Valor</th>
+                </tr>   
+                <tr>
+                    <td>1</td>
+                    <td>239.99</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>129.75</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>99.95</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>350.89</td>
+                </tr>
+            </table>
+
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let numeroEmpleado = 0;
+                let numero = 0;
+                let salarioEmpleado = .0;
+
+                /* converir tipos de datos */
+                numeroEmpleado = parseInt(numeroEmpleado);
+                numero = parseInt(numero);
+                salarioEmpleado = parseFloat(salarioEmpleado);
+
+                /* comenzar pidiendo datos */
+                numeroEmpleado = window.prompt("Ingresa el número de un empleado: \n[si desea salir, ingresa -1]");
+                
+                while(-1 != numeroEmpleado){
+                    numero = window.prompt("Ingresa el número del artículo (1-5) vendido por el empleado "+numeroEmpleado+"\n[si desea salir, ingresa -1]");
+
+                    while(-1 != numero){
+                        /* 1 */
+                        if(1 == numero) { salarioEmpleado += 239.99; }
+                        /* 2 */
+                        if(2 == numero) { salarioEmpleado += 129.75; }
+                        /* 3 */
+                        if(3 == numero) { salarioEmpleado += 99.95; }
+                        /* 4 */
+                        if(4 == numero) { salarioEmpleado += 350.89; }
+                    
+                        numero = window.prompt("Ingresa el número del artículo (1-5) vendido por el empleado "+numeroEmpleado+"\n[si desea salir, ingresa -1]");
+                    }
+                    
+                    document.writeln("Salario total del empleado: "+numeroEmpleado+" es: $"+salarioTotal(salarioEmpleado));
+                    
+                    numeroEmpleado = window.prompt("Ingresa el número de un empleado: \n[si desea salir, ingresa -1]");
+                
+                }
+
+                /* funcion para calcular el salario total */
+                function salarioTotal(x){
+                    return x*9/100;
+                }
+
+
+            </script>
+            
+        </div>
+    </body>
+</html>

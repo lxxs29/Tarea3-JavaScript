@@ -1,0 +1,71 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 7 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 7.14: Ejemplo7_4.css -->
+<!-- Preincremento y postincremento. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Preincremento y postincremento | Ejemplo 7.4</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.4</strong> Ejemplo | Preincremento y postincremento.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                let c;
+
+                c = 5;
+                document.writeln("<h3>Postincremento</h3>");
+                document.writeln("<p>" + c);                    // impreme 5
+                //imprime 5 y luego incrementa
+                document.writeln(" " + c++);
+                document.writeln(" " + c +"</p>");              // imprime 6    
+                
+                c = 5;
+                document.writeln("<h3>Preincremento</h3>");
+                document.writeln("<p>" + c);                    // impreme 5
+                // incrementa y luego imprime 6 
+                document.writeln(" " + ++c);
+                document.writeln(" " + c +"</p>");              // imprime 6    
+           </script>
+        </div>
+    </body>
+</html>

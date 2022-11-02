@@ -1,0 +1,108 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.21 -->
+
+<!-- 
+
+    PONER ESTA PAGINA COMO UNA DIRECCION APARTE Y NO COMO CONTINUIDAD 
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.21</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 350px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: black solid 1px;
+                color: black;
+                position: relative;
+                left: 23em;
+            }
+            td, th {
+                border: black solid 1px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.21</strong> Ejercicio | Escriba una secuencia de comandos que produzca texto de HTML5 que siga mostrando en la ventana de comandos los multiplos del entero 2 (a saber, 2,4,8,16,32,64, etc). Su ciclo <i>no debe terminar</i> (es decir, debe un <i>ciclo infinito</i>) ¿Qué ocurre cuando ejecuta el programa?.
+        </section> 
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            
+            <!-- Desarrollo en JavaScript  -->
+            <script>
+                /* variable */
+                
+                /* confirmacion */
+                
+                window.alert("Ejercicio 7.21\nEstá pagina no cargará porque contiene un ciclo while INFINITO.\n Al ejecutar este script se generan números infinitos (multiplos de 2), por lo cual nunca termina la ejecuacion y los calculos, el navegador no podrá abrirla página y posiblemente este comience a gastar muchos recursos de la computadora."); 
+                
+                
+                let numero = 2;
+                let resultado = 0;
+                let cont = 1;
+                while(true){
+                    resultado = + numero * cont;
+                    console.log(resultado);
+                    cont ++;
+                }
+
+            </script>
+        </div>
+        <!--              
+                        |>
+                    ___|____
+                    \_____/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </body> 
+</html>

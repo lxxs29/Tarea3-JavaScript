@@ -1,0 +1,92 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 6.4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejercicios.css">        
+        <title>Ejercicio 6.4</title>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+           <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a> 
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VI</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>6.4</strong> Ejercicio | Ideniifique y corrija en cada una de las siguientes instrucciones.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Desarrollo del ejercicio -->
+        <div class="cont-2">
+            <!-- Secciones de código de muestras -->
+             
+                <strong>a)</strong>    
+                <p>
+                    if (c < 7);
+                            window.alert("c es menor que 7");
+                </p>
+                <p>
+                    <strong>b)</strong>
+                    <p>
+                        if (c => 7 )
+                            window.alert("c es igual o mayor que 7");
+                    </p>
+                </p>
+                <!-- Respuesta -->
+                <hr>
+                <p>
+                    <strong>Corrección:</strong>
+                </p>
+                
+                <strong>a)</strong>    
+                <p>
+                    if (c < 7)
+                            window.alert("c es menor que 7");
+                </p>
+                <p>
+                    Cuando solo se usa una l&iacute;nea de c&oacute;digo despues de una condici&oacute;n es necesario indicar que la instrucci&oacute;n continua, para ello en el caso de solo ser una l&iacute;nea siguiente, se puede dejar el fin de la condici&oacute;n son ; o sin {}. 
+                </p>
+                <hr>
+                <p>
+                    <strong>b)</strong>
+                    <p>
+                        if (c >= 7 ){
+                            window.alert("c es igual o mayor que 7");
+                        }
+                    </p>
+                    <p>El operador para comparar en este caso debe ser >= no =>.</p>
+                </p>
+
+
+        </div>
+    </body>
+</html>

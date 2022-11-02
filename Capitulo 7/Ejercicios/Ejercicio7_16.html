@@ -1,0 +1,100 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.16 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.16</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: black solid 1px;
+                color: black;
+                position: relative;
+                left: 23em;
+                justify-content: center;
+            }
+            td, th {
+                border: black solid 1px;
+                justify-content: center;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.16</strong> Ejercicio | Escriba una secuencia de comandos que utilice ciclos para imprimir la siguiente tabla de valores. Muestre los  resultados en una tabla de HTML5. Use CSS para centrar los datos en cada columna.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let conta = 1;
+
+                /* convertir a int */
+                conta = parseInt(conta);
+               
+                document.writeln("<table>");
+                    document.write("<tr>   <td>N</td>   <td>10*N</td>   <td>100*N</td>   <td>1000*N</td></tr>")
+                while(6 >= conta){
+                    document.writeln("<tr><td>"+conta +"</td><td>"+10*conta +"</td><td>"+100*conta +"</td><td>"+1000*conta++ +"</td></tr>");
+                }
+                document.writeln("</table>");
+                
+            </script>
+        </div>
+        <!--              
+                        |>
+                    ___|____
+                    \_____/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </body> 
+</html>

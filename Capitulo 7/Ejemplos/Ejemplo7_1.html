@@ -1,0 +1,88 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 7 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 7.7: Ejemplo7_1.css -->
+<!-- Repeticion controlada por contador para calcular el promedio de una clase. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programa del promedio de una clase | Ejemplo 7.1</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.1</strong> Ejemplo | Calificaciones </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                let total;                      // suma de calificaciones
+                let contadorCalificaciones;     // numero de calificaciones introducidas
+                let calificacion;               // calificacion escrita por el usuario (como una cadena)
+                let valorCalificacion;          // valor de la calificacion (convertido en entero)   
+                let promedio;                   // promedio de todas las calificaciones               
+
+                // Fase de inicializacion
+                total = 0;                      // borrar el total
+                contadorCalificaciones = 1;     // preparar para iterar
+
+                // Fase de procesamiento
+                    // iterar 10 veces
+                while(contadorCalificaciones <= 10){
+                    // pedir la entrada y leer la calificacion del usuario
+                    calificacion = window.prompt("Escriba la calificación entera: ","0");
+
+                    // convertir calificacion de cadena en entero
+                    valorCalificacion = parseInt(calificacion);
+
+                    // sumar valorCalificacion al total
+                    total += valorCalificacion;
+
+                    // agregar 1 al contadorCalificaciones
+                    contadorCalificaciones += 1; 
+
+                }   // fin del while
+
+                // Fase de terminacion
+                promedio = total / 10;          // calcular el promedio
+                
+                // mostrar el promedio de las calificaciones de los examenes
+                document.writeln("<h1>El promedio de la clase es: "+ promedio +" </h1>");
+           </script>
+        </div>
+    </body>
+</html>

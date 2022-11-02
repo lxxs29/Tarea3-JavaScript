@@ -1,0 +1,96 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 7 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 7.9: Ejemplo7_2.css -->
+<!-- Repeticion controlada por contador por centinela para calcular el promedio de una clase. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Programa del promedio de una clase: repeticion controlada por centinela | Ejemplo 7.2</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.2</strong> Ejemplo | Repeticion controlada por contador por centinela para calcular el promedio de una clase. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                let total;                      // suma de calificaciones
+                let contadorCalificaciones;     // numero de calificaciones introducidas
+                let calificacion;               // calificacion escrita por el usuario (como una cadena)
+                let valorCalificacion;          // valor de la calificacion (convertido en entero)   
+                let promedio;                   // promedio de todas las calificaciones               
+
+                // Fase de inicializacion
+                total = 0;                      // borrar el total
+                contadorCalificaciones = 0;     // preparar para iterar
+
+                // Fase de procesamiento
+                // pedir la entrada y leer la calificacion del usuario
+                calificacion = window.prompt("Escriba la calificacion entera, -1 para salir: ", "0");
+                
+                // convertir calificion de cadena a entero
+                valorCalificacion = parseInt(calificacion);
+                
+                while(valorCalificacion != -1){
+                    // sumar valorCalificacion al total
+                    total += valorCalificacion;
+                    
+                    // sumar 1 a contadorCalificaciones
+                    contadorCalificaciones = contadorCalificaciones + 1; 
+
+                    // pedir la entrada y leer calificacion del usuario
+                    calificacion = window.prompt("Escriba la calificacion entera, -1 para salir: ", "0");
+
+                    // convertit calificacion de cadena a entero
+                    valorCalificacion = parseInt(calificacion);
+                }   // fin de while
+
+                // Fase de terminacion
+                if(contadorCalificaciones != 0){
+                    promedio = total / contadorCalificaciones;
+
+                    // muestra el promedio de las calificaciones de los examenes
+                    document.writeln("<h1>El promedio de la clase es: "+promedio+"</h1>");
+                }else{
+                    document.writeln("<p>No se introdujeron calificaciones.</p>")
+                }
+            </script>
+        </div>
+    </body>
+</html>

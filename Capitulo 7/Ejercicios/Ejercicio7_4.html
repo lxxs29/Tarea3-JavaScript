@@ -1,0 +1,114 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.4 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-cuestionario.css">        
+        <title>Ejercicio 7.4</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.4</strong> Ejercicio | Escriba instrucci&oacute; en JavaScript para realizar cada una de las siguientes tareas: </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Declara la variable suma & x.
+                    </p>
+                </li>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Asignar 1 a la variable x.
+                    </p>
+                </li>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> Asignar 0 a la variable suma.
+                    </p>
+                </li>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> Sumar la variable x a suma y asignar el resultado a la variable suma.
+                    </p>
+                </li>
+                <!-- e -->
+                <li>
+                    <p>
+                        <strong>e)</strong> Imprimir "La suma es: ", seguido del valor de la variable suma.
+                    </p>
+                </li>     
+            </ul>
+
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* a) */
+                let suma, x;
+                /* b) */
+                x = 1;
+                /* c) */
+                suma = 0;
+                /* d) */
+                suma += x;
+                /* e) */
+                document.writeln("<h1>La suma es: "+ suma+" </h1>");
+            </script>
+
+            <img src="img/ejercicio7_4.png" alt="referencia" class="img-prueba">
+
+        </div>
+    </body>
+</html>

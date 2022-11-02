@@ -1,0 +1,92 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.14 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.14</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.12</strong> Ejercicio | Desarrolle una secuencia de comandos que determine el sueldo bruto para cada uno de tres empleados. La empresa paga la "cuota normal" en las primeras 40 horas de trabajo de cada empleado, y paga "cuota media" en todas las horas trabajadas que excedan de 40 horas. Ud recibe una lista de los empleados de la empresa, numero de horas que trabajó cada uno la semana pasada y la tarifa por horas de cada empleado. Su programa debe recibir como entrada esta información para cada empleado, determine el sueldo bruto de cada uno y producir texto de HTML5 que muestre ese sueldo bruto.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let numeroEmpleado = 1;
+                let horas = 0;
+                let salario = .0;
+                let total = .0;
+
+                /* convertir all tipo de dato adecuado */
+                numeroEmpleado = parseInt(numeroEmpleado);
+                horas = parseInt(horas);
+                salario = parseFloat(salario);
+                total = parseFloat(total);
+
+                while( 3 >= numeroEmpleado){
+                    horas = window.prompt("Ingresa el número de horas que trabajó el empleado "+numeroEmpleado+": ");
+                    salario = window.prompt("Ingresa el salario por hora del empleado "+numeroEmpleado+": ");
+
+                    if(40>= horas){ total = horas * salario; } else { total = 40 * salario + (horas - 40) * (salario + salario);}
+
+                    document.writeln("El salario del empleado número "+numeroEmpleado++ +" es: "+total);
+                    document.writeln("<br>");
+                }
+            </script>       
+        </div>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.11 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.11</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.11</strong> Ejercicio | Los conductors se preocupan acerca del kilometraje de sus autos Un conductor ha llevado el control de varios rebastecimientos de gasolina, registrando los Km conducidos y los Lt usadosen cada viaje. Desarrolle una secuencia de comandos que reciba como entrada los Km conducidos y los Lt usados por cada viaje. La secuencia de comandos debe calcular y producir texto de HTML5 que muestre el n&uacute;mero de Km por Lt obtenido en cada viaje, y debe imprimir el total de Km por Lt obtenidos en todos los reabastecimientos hasta este punto.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                
+                /* variables */
+                let totalLitros = 0;
+                let totalKilometros = 0;
+                let contaRegistros = 0;
+
+                let cantKilometros;
+                let cantLitros;
+
+                let promedio;
+
+                let continuar = 5;
+
+                // pedir los Km al usuario
+                cantKilometros = window.prompt("Escribe la cantidad de Kilometros conducidos: ","0");
+                
+                // convertir de cadena a float
+                cantKilometros = parseFloat(cantKilometros);
+                cantLitros = parseFloat(cantLitros);
+                promedio = parseFloat(promedio);
+
+                //ciclo while
+                while(continuar != -1){
+                    cantLitros = window.prompt("Escribe la cantidad de gasolina utilizada: ");
+                    document.writeln("La cantidad de kilometros para este reabastecimiento es: "+ (cantKilometros/cantLitros));
+
+                    totalKilometros += cantKilometros;
+                    totalLitros += cantLitros;
+                    contaRegistros++; 
+
+                    cantKilometros = window.prompt("Escribe la cantidad de kilometros conducidos: ","0");
+
+                    continuar = window.prompt("Si desea salir ingresa -1, sino presiona cualquier otra tecla.");
+                    continuar = parseInt(continuar);
+                }
+
+                /* Numero de reabastecimientos y promedio */
+                if(contaRegistros != 0){
+                    promedio = totalKilometros / totalLitros; 
+                    document.writeln("Número de reabastecimientos: "+ contaRegistros);
+                    document.writeln("Promedio: "+ promedio);
+                }else{
+                    document.writeln("No hay registros que evaluar.");
+                }
+
+
+            </script>
+        </div>
+    </body>
+</html>

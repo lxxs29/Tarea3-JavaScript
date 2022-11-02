@@ -1,0 +1,113 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.20 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.20</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 350px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: black solid 1px;
+                color: black;
+                position: relative;
+                left: 23em;
+            }
+            td, th {
+                border: black solid 1px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.20</strong> Ejercicio | Un palíndromo es un número o una frase de texto que se lee igual al derecho y al revés. Por ejemplo, cada uno los siguientes enteros de cinco dígitos es un paíndromo: 12321, 555555, 45554, y 11611. Escribe una secuencia de comandos que lea un entero de cinco dígitos y determine si es un palíndromo.
+        </section> 
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            
+            <!-- Desarrollo en JavaScript  -->
+            <script>
+            function palindromo(n){
+                inicio = 0;
+                final = n.length - 1;
+                while(n[inicio] == n[final]){
+                    if (inicio > final){
+                        return true;
+                    }
+                    inicio++;
+                    final--;
+                }
+                return false;
+            }
+
+            let numeros;
+
+            numeros = window.prompt("Ingresa un número de 5 Dígitos: ","xxxxx");
+            
+            if(numeros.length > 5){
+                while(numeros.length != 5){
+                    numeros = window.prompt("Error, el número ingresado tiene más de 5 dígitos\n Ingresa un número de 5 Dígitos: ","xxxxx");
+                }
+            }
+            /* muestro en consola */
+            palindromo(numeros) ? console.log("El número es palindromo") : console.log("El numero NO es palindromo");
+            
+            /* escribir en el documento de HTML5 */
+            palindromo(numeros) ? document.writeln("El número "+ numeros +" es palindromo: ") : document.writeln("El numero "+numeros+" NO es palindromo");
+            
+            </script>
+        </div>
+        <!--              
+                        |>
+                    ___|____
+                    \_____/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </body> 
+</html>

@@ -1,0 +1,103 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.6 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.6</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.6</strong> Ejercicio | Determine el valor de cada variable despu&eacute;s de realizar el c&aacute;lculo. Suponga que, cuando se empiza a ejecutar cada instricci&oacute;n, todas las variables tienen el valor 5.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Producto *= x++;
+                    </p>
+                </li>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Cociente /= +xx;
+                    </p>
+                </li>
+            </ul>
+            <hr>
+
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let x=5, producto = 5, cociente = 5;
+
+                /* a) */
+                producto *= x++;
+                /* b) */
+                cociente /= ++x;
+
+                /* escribir en el documento de HTML5 */
+                document.writeln("<h3>Producto = "+producto+"</h3>");
+                document.writeln("<h3>Cociente = "+cociente+"</h3>");
+
+                /* mostrar en consola */
+                console.log("Producto = "+producto);
+                console.log("Cociente = "+cociente);
+            </script>
+        </div>
+    </body>
+</html>

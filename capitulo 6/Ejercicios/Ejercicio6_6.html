@@ -1,0 +1,103 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 6.6 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejercicios.css">        
+        <title>Ejercicio 6.6</title>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+           <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a> 
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VI</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>6.6</strong> Ejercicio | Use las instrucciones que escribi&oacute; en el ejercicio 6.5 para escribir una secuancia de comandos completa que calcule e imprima el producto de tres enteros.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Desarrollo del ejercicio -->
+        <div class="cont-2">
+            
+            <script>
+                /* a) Indique que una secuencia de comandos calculará el producto de tres enteros [sugerecia: use texto que ayude a documentat una secuancia de comandos] */
+
+                // Calcula el producto de tres enteros
+
+                /* b) Declare las variables x, y, z y resultado */
+
+                let x;
+                let y;
+                let z;
+                let resultado;
+
+                /* c) Declare las variables xVal, yVal, zVal */
+                
+                let xVal;
+                let yVal;
+                let zVal;
+
+                /* d) Pida al usuario que introduszca el primer valor, lea el valor del usuario y almacenelo en la variable xVal */
+                
+                xVal = window.prompt("Ingresa un numero entero para el valor de X: ");
+
+                /* e) Pida al usuario que introduszca el segundo valor, lea el valor del usuario y almacenelo en la variable yVal */
+                
+                yVal = window.prompt("Ingresa un numero entero para el valor de Y: ");
+
+                /* f) Pida al usuario que introduszca el tercer valor, lea el valor del usuario y almacenelo en la variable zVal */
+
+                zVal = window.prompt("Ingresa un numero entero para el valor de Z: ");
+
+                /* g) Convierta la cadena xVal en un entero y almacene el resultado en la variable x. */
+                
+                x = parseInt(xVal);
+                
+                /* h) Convierta la cadena yVal en un entero y almacene el resultado en la variable y. */
+                y = parseInt(yVal);
+                
+                /* i) Convierta la cadena zVal en un entero y almacene el resultado en la variable z. */
+                z = parseInt(zVal);
+                
+                /* j) Calcule el producto sw los tres enteros contenidos en las variables x, y & z, y asigne el resultado a la variable resultado. */
+                resultado = x * y * z;
+
+                /* k) Escriba una línea de texto HTML5 que contenga la cadena "El producto es" seguida del valor de la variable resultado */
+                document.writeln("<h1>El producto es " + resultado + "</h1>");
+
+            </script>
+
+
+
+        </div>
+    </body>
+</html>

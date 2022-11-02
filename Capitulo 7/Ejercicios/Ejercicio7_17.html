@@ -1,0 +1,116 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.17 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.17</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: black solid 1px;
+                color: black;
+                position: relative;
+                left: 23em;
+            }
+            td, th {
+                border: black solid 1px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.17</strong> Ejercicio | Utilizando una metodológia similar a la del ejercicio 7.15, encuentre los <i>dos</i> valores más grandes de los 10 que se introdujeron..</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            
+            <!-- Desarrollo en JavaScript -->
+            <script>
+                /* variables */
+                let contadorNumerosGrandes = 1;
+                let ingresadoNumero = 0;
+
+                let mayorNumero = 0;
+                let segundoMayor = 0 ;
+                let menorNumero = 0;
+
+
+                while(contadorNumerosGrandes <= 10){
+                    ingresadoNumero = window.prompt("Ingresa un número entero: ");
+
+                    //validamos si el numero es mayor, si es mayor se actuliza y se manda el mayor anterior al segundo
+                    if(ingresadoNumero > mayorNumero){
+                        segundoMayor = mayorNumero;
+                        mayorNumero = ingresadoNumero;
+                    }
+                    // validamos si el numero ingresado es mayor que el segundo, si es así se sustituye
+                    else if(ingresadoNumero > segundoMayor){
+                        segundoMayor = ingresadoNumero;
+                    }
+                    // validamos si el numero ingresado es menor que el numero anterior 
+                    if(ingresadoNumero < menorNumero){
+                        menorNumero = ingresadoNumero;
+                    }
+                    contadorNumerosGrandes++;
+                }
+                document.writeln("Mayor: "+mayorNumero+"<br>");
+                document.writeln("Segundo Mayor: "+segundoMayor+"<br>");
+                
+            </script>
+
+        </div>
+        <!--              
+                        |>
+                    ___|____
+                    \_____/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </body> 
+</html>

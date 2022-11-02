@@ -1,0 +1,81 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.5 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.5</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.5</strong> Ejercicio | Combine las instrucciones que escribi&oacute; en el ejercicio 7.4 para formar una secuencia de comandos que calcule e imprima la suma de los enteros del 1 al 10. Us la instrucci&oacute;n while para iterear a trav&eacute;s de las instrucciones de calculo e incremento.. El ciclo debe terminar cuando x sea igual a 11. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Desarrollo en JavaScript -->
+            <script>
+               /* variables */
+               let suma = 0;    
+               let x = 1;
+               
+               while(x <= 10){
+                suma += x;
+                ++x;
+               }
+
+               /* Mostrar en consola */
+               console.log("La suma es: "+ suma);
+
+               /* escribir en documento de HTML5 */
+               document.writeln("<h1>La suma es: "+suma+"</h1>")
+            </script>
+        </div>
+    </body>
+</html>

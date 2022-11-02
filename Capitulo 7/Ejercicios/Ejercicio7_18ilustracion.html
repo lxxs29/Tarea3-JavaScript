@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.18: Ejercicio7_18ilustracion.html -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Secuenacia de comandos misteriosa.</title>
+        <script>
+
+                var fila = 10;
+                var columna;
+
+                while(fila >= 1)
+                {
+                        columna = 1;
+                        document.writeln("<p>");
+
+                        while(columna <= 10)
+                        {
+
+                            document.write( fila % 2 == 1 ? "<" : ">");
+                            ++columna;
+
+                        } // end while
+
+                        --fila;
+                        document.writeln("</p>");
+
+                } // en while
+        </script>
+    </head><body></body>
+</html>

@@ -1,0 +1,123 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.19 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.19</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 350px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+            table{
+                border: black solid 1px;
+                color: black;
+                position: relative;
+                left: 23em;
+            }
+            td, th {
+                border: black solid 1px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.19</strong> Ejercicio | <em><i>(Problema del else suelto)</i></em> Determine la salida de cada uno de los siguientes segmentos de código, cuando x es 9 & y es 11, y cuando x es 11 & y es 9. Observe que el intérprete ingnora la sangría en una secuencia de comandos. Además, el interrete de JavaScript siempre aocia un else con el if anterior, a menos que indique de otra forma mediante la colocación de llaves ( {} ). </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+            <ul>
+                <!-- a) -->
+                <img src="img/ejercicio7_19_a.png" alt="seccion de codigo" class="img-prueba">
+                <li><p><strong>a) Cuando x = 9 & y = 11: </strong> En este caso ambas condiciones son cumplidas ya que 9 es menor que 10 y 11 es mayor que 11, por lo que se debería imprir unicamente la línea que está despues del segundo if.</p></li>
+                <li><p><strong>a) Cuando x = 11 & y = 9: </strong> En este segundo caso sucede que ninguna de las condiciones en es cumplida, por lo que salta al else y debería escribir las dos líneas de "document.writeln("...")".</p></li>
+                <!-- b) -->
+                <img src="img/ejercicio7_19_b.png" alt="seccion de codigo" class="img-prueba">
+                <li><p><strong>b) Cuando x = 9 & y = 11: </strong>En este caso la primer condicioón es cierta por lo cual pasa al if anidado el cual también se cumple porque 11 es mayor que 10, así que se imprimer la línea dentro del segundo if. .</p></li>
+                <li><p><strong>b) Cuando x = 11 & y = 9: </strong>No se cumple ninguna condicion, ya que x es mayor a 11 y el acceso para el segundo if si se cumple la condicion principal, por lo tanto salta al else e imprime las dos líneas  .</p></li>
+                
+                
+            </ul>
+           
+            <!-- Desarrollo en JavaScript  -->
+            <script>
+                
+                /* a) */
+                if( x < 10 )
+                if( y > 10 )
+                document.writeln( "<p>*****</p>" );
+                else
+                document.writeln( "<p>######</p>" );
+                document.writeln( "<p>$$$$$$</p>" );
+                
+                
+                /* b) */
+                if( x < 10 )
+                {
+                if ( y > 10 )
+                document.writeln( "<p>*****</p>" );    
+                }
+                else
+                {
+                document.writeln( "<p>######</p>" );    
+                document.writeln( "<p>$$$$$$</p>" );    
+                }
+
+                
+            </script>
+            
+
+
+        </div>
+        <!--              
+                        |>
+                    ___|____
+                    \_____/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </body> 
+</html>

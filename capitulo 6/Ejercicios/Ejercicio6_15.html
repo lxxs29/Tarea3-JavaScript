@@ -1,0 +1,88 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 6  |  6.15 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-cuestionario.css">        
+        <title>Ejercicio 6.15</title>
+        <style type="text/css">
+            #th1{
+                margin-left: 2em;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VI</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>6.15</strong> Ejercicio | Escriba una secuencia de comandos que muestre los n&uacute;meros del 1 al 4 en la misma l&iacute;nea, con cada par de n&uacute;meros adyacentes separados por un espacio. Escriba la secuencia de comandos usando los siguientes m&eacute;todos:
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Use una instrucci&oacute;n document.writeln.
+                        <script>
+                            /* a) */
+                            document.writeln("<h1 id=th1 >1 2 3 4</h1>")
+                        </script>
+                        
+                    </p>
+                </li>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Use cuatro instrucciones document.write.
+                        <script>
+                            /* b) */
+                            document.write("<h1 id=th1>1</h1>");
+                            document.write("<h1 id=th1>2</h1>");
+                            document.write("<h1 id=th1>3</h1>");
+                            document.write("<h1 id=th1>4</h1>");
+                        </script>
+                    </p>
+                </li>
+            </ul>
+        
+        </div>
+        <!-- Fin del cuestionario -->
+
+    </body>
+</html>

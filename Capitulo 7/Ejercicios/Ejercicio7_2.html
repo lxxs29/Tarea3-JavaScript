@@ -1,0 +1,71 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 7 -->
+<!-- Ejercicio 7_2 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.2</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.2</strong> Ejemplo | Escriba cuatro instrucciones en JavaScript que sumen 1, cada una, a la variable x, que contiene un n&uacute;mero. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                /* variables */
+                let x;
+                 
+                x = x + 1;
+                x += 1;
+                ++x;
+                x++;                
+
+                /* escribir en el documento de HTML5 */
+                document.writeln("<h1> x = x + 1;</h1>");
+                document.writeln("<h1> x += 1;</h1>");
+                document.writeln("<h1> ++x;</h1>");
+                document.writeln("<h1> x++;</h1>");
+               
+           </script>
+
+        </div>
+
+    </body>
+</html>

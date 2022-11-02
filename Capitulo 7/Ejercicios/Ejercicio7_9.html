@@ -1,0 +1,130 @@
+<!-- Miguel Conde Luis -->
+<!-- Ejercicios Capítilo 7 -->
+<!-- 7.9 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles-ejer.css">        
+        <title>Ejercicio 7.9</title>
+
+        <style type="text/css">
+            .img-prueba{
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 420px;
+            }
+            h3{
+                position: relative;
+                margin-left: 45px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style> 
+
+    </head>
+    <body>
+        
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>7.9</strong> Ejercicio | Identifique y corrija los <i>errore</i> en cada uno de los siguientes segmentos de c&oacute;digo.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <!-- Custionario -->
+        <div class="cont-2">
+                        
+            
+            
+            <ul>
+                <!-- Respuesta -->
+                <!-- a) -->
+                <img src="img/ejercicio7_9_a.png" alt="imagen del codigo" class="img-prueba">
+                    <li><p><strong>a) </strong> <strong>Errores:</strong> el ; despues del if est&aacute; mal, en su lugar deben ir las llaves {} y de igual forma el else necesita las llaves de apertura y cerradura .</p></li>
+                <!-- b) -->
+                <img src="img/ejercicio7_9_b.png" alt="imagen del codigo" class="img-prueba">
+                    <li><p><strong>b) </strong><strong>Errores: </strong> El corchete ([) despues de la condici&oacute;n del while no es correcto, en su lugar deber&iacute;a ir la llave que abre ( { ) .</p></li>
+                <!-- c) -->
+                <img src="img/ejercicio7_9_c.png" alt="imagen del codigo" class="img-prueba">
+                    <li><p><strong>c) </strong><strong>Errores: </strong> El while necesita las llaves de apertura y cerradura ( {} ).</p></li>
+                <!-- d) -->
+                <img src="img/ejercicio7_9_d.png" alt="imagen del codigo" class="img-prueba">
+                    <li><p><strong>d) </strong><strong>Errores: </strong>Falta la llave que cierra al ciclo while.</p></li>
+            </ul>
+
+            
+
+
+
+
+
+
+            <!-- Códigoo en JavaScript para hacer la demostración -->
+            <script>
+                
+                
+                /* a) */
+                /* if( edad >= 65);
+                    document.writeln("Edad es mayor o igual que 65");
+                */
+                                                                
+                /* b) */
+               /*  var x = 1, total;
+                while(x <= 10)
+                [
+                    total += x;
+                    ++x;
+                } */
+
+
+                /* c) */
+                /* var x = 1;
+                var total = 0;
+                while (x <= 100)
+                    total += x;
+                    ++x;
+                */
+
+
+                /* d) */
+                /* var y = 5;
+                while(y > 0)
+                {
+                    document.writeln(y);
+                    ++y;
+                 */
+
+            </script>
+
+        </div>
+    </body>
+</html>
