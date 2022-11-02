@@ -1,0 +1,45 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.8: Ejemplo8_5.css -->
+<!-- Uso de la instracción continue en una instracción for. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alternar entre formatos de listas de HTML5</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.8</strong> Ejemplo | Uso de la instracción continue en una instracción for. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                for(var cuenta=1;cuenta<=10;++cuenta){
+                    if(cuenta == 5){
+                        continue;   // omite el resto del código del ciclo sólo si cuenta == 5
+                    }
+                    document.writeln(cuenta+ " ");
+                }                
+                document.writeln("<p>Se usó continue para no imprimir el 5</p>");
+
+           </script>
+        </div>
+    </body>
+</html>

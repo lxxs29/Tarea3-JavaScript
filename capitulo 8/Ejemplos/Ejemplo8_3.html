@@ -1,0 +1,43 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.3: Ejemplo8_3.html -->
+<!-- Suma con la estructura de repetición. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sumar los enteros pares del 2 al 100</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.3</strong> Ejemplo | Suma con la estructura de repetición. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                let suma = 0;
+
+                for(let numero = 2; numero <= 100; numero += 2){
+                    suma += numero;
+                }
+
+                document.writeln("La suma de los enteros pares "+ "del 2 al 100 es "+suma);
+
+           </script>
+
+        </div>
+
+    </body>
+</html>

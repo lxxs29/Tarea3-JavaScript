@@ -1,0 +1,132 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.10</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.10</strong> Ejercicio | <b><i>(Canción "Los Doce Días de Navidad")</i></b> Escriba una secuencia de comandos que utilice estructuras de repetición y un switch para imprimir la canción de "Los Doce Días de Navidad".<br><br>Recarga la página para abrir de nuevo el menú<br>Ingresa <b>14</b> para mostrar la letra COMPLETA. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                /* Los doce días de navidad */
+                let opc = 0;
+                
+                do {
+                    
+                    opc = parseInt(window.prompt("Los Doce Días de navidad - The Twelve Days of Christmas\nIngresa una número del [1 - 12] para mostrar cada verso (14 para salir y mostrar el verso): ","1"));
+                    
+                    switch(opc){
+                        case 1:
+                            document.writeln("<b>Verse 1</b><br>");
+                            document.writeln("On the first day of Christmas, my true love sent to me<br>A partridge in a pear tree.");
+                            break;
+                        case 2:
+                            document.writeln("<b>Verse 2</b><br>");
+                            document.writeln("On the second day of Christmas, my true love sent to me<br>Two turtle doves, and<br>A partridge in a pear tree");        
+                            break;
+                        case 3:
+                            document.writeln("<b>Verse 3</b><br>");
+                            document.writeln("On the third day of Christmas, my true love sent to me<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 4:
+                            document.writeln("<b>Verse 4</b><br>");
+                            document.writeln("On the fourth day of Christmas, my true love sent to me<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 5:
+                            document.writeln("<b>Verse 5</b><br>");
+                            document.writeln("On the fourth day of Christmas, my true love sent to me<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 6:
+                            document.writeln("<b>Verse 6</b><br>");
+                            document.writeln("On the sixth day of Christmas, my true love sent to me<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 7:
+                            document.writeln("<b>Verse 7</b><br>");
+                            document.writeln("On the seventh day of Christmas, my true love sent to me<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 8:
+                            document.writeln("<b>Verse 8</b><br>");
+                            document.writeln("On the eighth day of Christmas, my true love sent to me<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 9:
+                            document.writeln("<b>Verse 9</b><br>");
+                            document.writeln("On the ninth day of Christmas, my true love sent to me<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 10:
+                            document.writeln("<b>Verse 10</b><br>");
+                            document.writeln("On the tenth day of Christmas, my true love sent to me<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 11:
+                            document.writeln("<b>Verse 11</b><br>");
+                            document.writeln("On the eleventh day of Christmas, my true love sent to me<br>Eleven pipers piping<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            break;
+                        case 12:
+                            document.writeln("<b>Verse 12</b><br>");
+                            document.writeln("On the twelfth day of Christmas, my true love sent to me<br>Twelve drummers drumming<br>Eleven pipers piping<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+
+                            break;
+                        // MOSTRAR LA CANCIÓN COMPLETA    
+                        case 13:
+                            document.writeln("<b>Verse 1</b><br>");
+                            document.writeln("On the first day of Christmas, my true love sent to me<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 2</b><br>");
+                            document.writeln("On the second day of Christmas, my true love sent to me<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 3</b><br>");
+                            document.writeln("On the third day of Christmas, my true love sent to me<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 4</b><br>");
+                            document.writeln("On the fourth day of Christmas, my true love sent to me<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 5</b><br>");
+                            document.writeln("On the fourth day of Christmas, my true love sent to me<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 6</b><br>");
+                            document.writeln("On the sixth day of Christmas, my true love sent to me<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 7</b><br>");
+                            document.writeln("On the seventh day of Christmas, my true love sent to me<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 8</b><br>");
+                            document.writeln("On the eighth day of Christmas, my true love sent to me<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 9</b><br>");
+                            document.writeln("On the ninth day of Christmas, my true love sent to me<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 10</b><br>");
+                            document.writeln("On the tenth day of Christmas, my true love sent to me<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 11</b><br>");
+                            document.writeln("On the eleventh day of Christmas, my true love sent to me<br>Eleven pipers piping<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");
+                            document.writeln("<br>");
+                            document.writeln("<b>Verse 12</b><br>");
+                            document.writeln("On the twelfth day of Christmas, my true love sent to me<br>Twelve drummers drumming<br>Eleven pipers piping<br>Ten lords a-leaping<br>Nine ladies dancing<br>Eight maids a-milking<br>Seven swans a-swimming<br>Six geese a-laying<br>Five golden rings<br>Four calling birds<br>Three french hens<br>Two turtle doves, and<br>A partridge in a pear tree");x
+                            break;
+                        default:
+                            
+                            break;
+                    }
+                } while (opc != 14);
+            </script>
+        </div>
+    </body>
+</html>

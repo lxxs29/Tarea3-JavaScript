@@ -1,0 +1,43 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.7</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.7</strong> Ejercicio | Escriba una secuencia de comandos que calcule el producto de los entero impares del 1 al 15 y después imprima texto de HTML5 que muestre el resultado. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                let producto = 1;
+
+
+                for(let i=1;i<=15;i++){
+                    // impares
+                    if(i % 2 != 0){
+                        producto *= i;
+                        //document.writeln(i+" " );
+                    }
+                }
+                document.writeln("Valor del producto de los números impares del 1 al 15: "+"<b>"+producto+"<b>");
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.7: Ejemplo8_5.css -->
+<!-- Uso de la instruccion de seleccion multiple switch. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alternar entre formatos de listas de HTML5</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.5</strong> Ejemplo | Uso de la instruccion de seleccion multiple switch. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                
+                var seleccion;
+                var etiquetaInicial;
+                var etiquetaFinal;
+                var entradaValida =  true;
+                var tipoLista;
+
+                seleccion = window.prompt("Selecciona una estilo de lista:\n1 (numerada)\n2 (con letras)\n3 (números romanos)","1");
+
+                switch (seleccion){
+                    case "1":
+                        etiquetaInicial = "<ol>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h1>Lista numerada</h1>";
+                        break;
+                    case "2":
+                        etiquetaInicial = "<ol style = 'list-style-type: upper-alpha'>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h1>Lista con letras</h1>";
+                        break;
+                    case "3":
+                        etiquetaInicial = "<ol style = 'list-style-type: upper-roman'>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h1>Lista con números romanos</h1>";
+                        break;
+                    default:
+                        entradaValida = false;
+                        break;
+                }
+                if(entradaValida === true){
+                    document.writeln(tipoLista + etiquetaInicial);
+                    for(var i = 1;i<=3;i++){
+                        document.writeln("<li>Elemento de lista "+i+"</li>");
+                    }
+                    document.writeln(etiquetaFinal);
+                }else{
+                    document.writeln("Selección inválida: "+seleccion);
+                }
+           </script>
+        </div>
+    </body>
+</html>

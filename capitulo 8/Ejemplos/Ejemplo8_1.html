@@ -1,0 +1,41 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.1: Ejemplo8_1.html -->
+<!-- Repetición controlada por un contador. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Repetici&oacute;n controlada por un contador</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.1</strong> Ejemplo | Repetición controlada por un contador. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                let contador = 1; // inicialización
+                contador = parseInt(contador);
+
+                while(contador <= 7){   // condicion de repeticion
+                    document.writeln("<p style = 'font-size: " + contador + "ex'> Tamaño de fuente de HTML5 " + contador + "ex</p>");
+                    ++contador; //incremento
+                } // fin de while
+
+           </script>
+        </div>
+    </body>
+</html>

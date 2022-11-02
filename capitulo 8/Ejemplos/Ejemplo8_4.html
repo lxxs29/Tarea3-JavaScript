@@ -1,0 +1,83 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.4: Ejemplo8_4.html -->
+<!-- cálculo de interés compuesto con la isntrucción for. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo de Instrucciones compuestos</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            table       {
+                            width: 300px;
+                            border-collapse: collapse;
+                            background-color: lightblue;
+                            position: relative;
+                            left: 300px;
+            }
+            table, td, th{
+                            border: 1px solid black;
+                            padding: 4px;
+                            text-align: center;
+            }
+            th          {
+                                
+                            text-align: center;
+                            color: white;
+                            background-color: darkblue;
+            }
+            tr.filaimpar{ background-color: white; }
+
+        </style>
+
+
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.4</strong> Ejemplo | Cálculo de interés compuesto con la instrucción for. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                let monto;                  // monto actual
+                let principal = 1000.00;    // monto principal
+                let tasa = 0.05;            // tasa de interés
+                let anio=0;
+
+                document.writeln("<table>");    // comenzar la tabla
+                document.writeln("<caption>Capítulo de interés compuesto</caption>");
+                document.writeln("<thead><tr><th>Año</th>");    //Encabezado de la columna del año
+                document.writeln("<th>Monto en deposito</th>");      // encabezado del monto
+                document.writeln("</tr></thead><tbody>");
+
+                // imprimir una fila de la tabla para cada año
+                for(let inicio = 1; anio <= 10; ++anio){
+                    monto = principal * Math.pow(1.0 + tasa, anio);
+                    if(anio % 2 !== 0){
+                        document.writeln("<tr class=filaimpar'><td>"+anio+"</td><td>" + monto.toFixed(2) + "</td></tr>")
+                    }else{
+                        document.writeln("<tr><td>"+anio+"</td><td>"+monto.toFixed(2)+"</td></tr>")
+                    } // fin del for
+                }
+
+                document.writeln("</tbody></table>")
+
+
+                
+           </script>
+
+        </div>
+
+    </body>
+</html>

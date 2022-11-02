@@ -1,0 +1,91 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.11</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.11</strong> Ejercicio | Un vendedor minorista en línea vende cinco productos distintos, cuyos precios de venta son los siguientes:
+                <ul>
+                    <li>1) $2.98</li>
+                    <li>2) $4.50</li>
+                    <li>3) $9.98</li>
+                    <li>4) $4.49</li>
+                    <li>5) $6.87</li>
+                </ul>
+                Escriba una secuencia de comandos le auna serie de pares de números.
+
+            </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                /* variables */
+                let costo = 0.0;
+                let montoTotal = 0;
+                let numeroProducto = 0;
+                let cantidadVendida = 0;
+
+                /* pedir valores al usuario */
+                numeroProducto =  parseInt(window.prompt("Venta en almacen\nPrecios:\nProducto 1: $2.98\nProducto 2: $4.50\nProducto 3: $9.98\nProducto 4: $4.49\nProducto 5: $6.87\n\nIngresa el primer número del producto: \n(-1 para SALIR y MOSTRAR en el documeto de HTML)"));
+
+                while(-1 != numeroProducto){
+                    switch(numeroProducto){
+                        case 1:
+                            cantidadVendida = window.prompt("Ingresa la cantidad vendida: ");
+                            window.alert("Precio de esta venta: "+ ( cantidadVendida*2.98 ));
+                            document.writeln("<br>Precio de esta venta: "+ ( cantidadVendida*2.98 ));
+                            montoTotal += cantidadVendida*2.98;
+                            break;
+                        case 2:
+                            cantidadVendida = window.prompt("Ingresa la cantidad vendida: ");
+                            window.alert("Precio de esta venta: "+ ( cantidadVendida*4.50 ));
+                            document.writeln("<br>Precio de esta venta: "+ ( cantidadVendida*4.50 ));
+                            montoTotal += cantidadVendida*4.50;
+                            break;
+                        case 3:
+                            cantidadVendida = window.prompt("Ingresa la cantidad vendida: ");
+                            window.alert("Precio de esta venta: "+ ( cantidadVendida*9.98 ));
+                            document.writeln("<br>Precio de esta venta: "+ ( cantidadVendida*9.98 ));
+                            montoTotal += cantidadVendida*9.98;
+                            break;
+                        case 4:
+                            cantidadVendida = window.prompt("Ingresa la cantidad vendida: ");
+                            window.alert("<br>Precio de esta venta: "+ ( cantidadVendida*4.49 ));
+                            document.writeln("<br>Precio de esta venta: "+ ( cantidadVendida*4.49 ));
+                            montoTotal += cantidadVendida*4.49;
+                            break;
+                        case 5:
+                            cantidadVendida = window.prompt("Ingresa la cantidad vendida: ");
+                            window.alert("Precio de esta venta: "+ ( cantidadVendida*6.87 ));
+                            document.writeln("<br>Precio de esta venta: "+ ( cantidadVendida*6.87 ));
+                            montoTotal += cantidadVendida*6.87;
+                            break;
+                        default:
+                            window.alert("¡Ingresa un número valido!");
+                            break;
+                    }
+                    numeroProducto =  parseInt(window.prompt("Venta en almacen\nPrecios:\nProducto 1: $2.98\nProducto 2: $4.50\nProducto 3: $9.98\nProducto 4: $4.49\nProducto 5: $6.87\n\nIngresa el número del siguiente producto: \n(-1 para SALIR y MOSTRAR en el documeto de HTML)"));
+                }
+                window.alert("Las ventas totales fueron: "+montoTotal);
+                document.writeln("<br>Las ventas totales fueron: "+montoTotal);
+            </script>
+        </div>
+    </body>
+</html>

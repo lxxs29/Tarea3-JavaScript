@@ -1,0 +1,46 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.9: Ejemplo8_6.css -->
+<!-- Uso de la instrucción de repetición do ... while. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Uso de la instrucción de repetición do ... while</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.6</strong> Ejemplo | Uso de la instrucción de repetición do ... while. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+            let contador = 1;
+
+            do{
+                document.writeln("<h" + contador + ">Éste es "+"un encabezado de nivel h"+contador+"</h1"+contador+">"); 
+
+                contador++;
+
+            }while(contador <= 6);
+            
+           </script>
+        </div>
+    </body>
+</html>

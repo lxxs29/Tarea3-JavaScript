@@ -1,0 +1,118 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.2</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.2</strong> Ejercicio | Escriba una instracción o un conjunto de instrucciones en JavaScript para realizar cada una de las siguientes tareas.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<Cuestionario>>------------------- -->
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Sumar los impares entre 1 y 99. Utilice una instracción for. Suponga que se han declarado las variables suma y cuenta.
+                    </p>
+                </li>
+                <!-- -------------------<<a>>------------------- -->
+                <script>
+                    /* a) */
+                    let numero;
+                    let cuenta;
+                    let suma = 0;
+
+                    for(let i=0;i<100;i++){
+                        // determino si el numero es impar, si el residuo es diferente de 0 es impar
+                        if(i % 2 != 0){
+                            console.log(i); // muestro en consola    
+                        }
+                        suma += i; 
+                    }
+
+                    console.log("Suma de impares del 1 al 99 = "+suma);
+                    document.writeln("Suma de impares del 1 al 99 = "+suma);
+                </script>
+               <hr>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Calcular el valor de 2.5 elevado a la potencia de 3. Use el método pow. 
+                </li>
+               <!-- -------------------<<b>>------------------- -->
+                   
+                   <script>
+                       let resultado = 0;
+                       /* b) */
+                       resultado = Math.pow(2.5, 3);
+                       document.writeln("<p> 2.5<sup>3</sup> = "+resultado+" </p>");
+                   </script>
+                <hr>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> Imprimir los enteros del 1 al 20 mediante el uso de un ciclo while y la variable contador x. Imprimar solo cinco entero por línea.
+                    </p>
+                </li>
+                
+                <!-- -------------------<<c>>------------------- -->
+                
+                <script>
+                    /* c) */
+                    let x = 1;
+
+                    document.writeln("<p>");
+
+                    while(x <= 20){
+                        document.writeln(x+" ");
+                        if(x % 5 == 0){
+                            document.writeln("</p><p>");
+                        }
+                        ++x;
+                    }
+                </script>
+                <hr>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> Repita el ejercicio 8.2 (c), pero ahora use una instrucción for.+
+                    </p>
+                </li>
+                
+                <!-- -------------------<<JavaScript>>------------------- -->
+                
+                <script>
+                    /* d) */
+                    let y = 1;
+                    document.writeln("<p>");
+                    for(y=1;y<=20;y++){
+                        document.writeln(y + " ");
+                        if(x % 5 == 0){
+                            document.writeln("</p><p>");
+                        }
+                    }
+                    document.writeln("</p>");
+                </script>
+            </ul>
+        </div>
+
+    </body>
+</html>

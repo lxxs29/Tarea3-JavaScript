@@ -1,0 +1,51 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.6</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.6</strong> Ejercicio | Escriba una secuencia de comandos que encuentre el menor de varios enteros no negativos. Suponga que el primer valor leído especifica el número de valores que el usuario introducirá. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                /* variables */
+                let x = 0;
+                let y = 0;
+                let menor = 0;
+
+                /* pedir los valores al usuario */
+                x = window.prompt("Ingresa un número entero positivo: ","1");
+
+                menor = window.prompt("Ingresa  el primer número: ","1");
+
+                for(let i = 2;i<=x;i++){
+                    y = window.prompt("Ingresa un número entero: ");
+                    if(y < menor){
+                        menor = y;
+                    }
+                }
+                // escribir en el doc de html 5
+                document.writeln("El menor de los números es: "+menor);
+
+            </script>
+        </div>
+    </body>
+</html>

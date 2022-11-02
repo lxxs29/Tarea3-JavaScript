@@ -1,0 +1,45 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.9</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.9</strong> Ejercicio | Una aplicación interesante de las compútadoras es dibujar gráficos convencionales y de barra(taambién llamados histogramas). Escriba una secuencia de comandos que lea cinco números entre 1 y 30. Por cada número imprima texto en HTML5 que muestre una línea que contega el mismo número de asteriscos adyacentes. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                let num = 0;
+                let contador = 1;
+
+                while(contador <= 5){
+                    num = window.prompt("Solo ingrersa numeros del [1 - 30]\nIngresa el numero ["+contador+"] : ");
+                    if((1<=num) && (30>=num)){
+                        for(let i=1;i<=num;i++){
+                            document.writeln("*"); 
+                        }
+                        document.writeln("<br>");
+                    }
+                    contador++;
+                }
+            </script>
+        </div>
+    </body>
+</html>

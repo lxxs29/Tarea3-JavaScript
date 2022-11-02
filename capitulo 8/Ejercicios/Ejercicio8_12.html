@@ -1,0 +1,115 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.12</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style>
+            code{
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.12</strong> Ejercicio | Suponga que <code>i = 1, j = 2, k = 3 y m = 2</code> ¿Qué es lo que imprime cada una de las siguientes instrucciones? ¿Son necesarios los paréntesis en cada caso?.</p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<Cuestionario>>------------------- -->
+            <!-- Cuestionario -->
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> <code>document.writeln( i == 1 );</code>
+                    </p>
+                    <ul>
+                        <li> >> Al ser una comparación lógica, el resultado es "true" porque esta cuestionando si el valor de i es igual a 1, lo cual es cierto. Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>
+                </li>
+                
+               <hr>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> <code>document.writeln( j == 3 );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprimer un "false", el valor de j es 2 no 3 por lo cual la comparación es falsa. Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>    
+                </li>
+               
+                <hr>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> <code>document.writeln( i >= 1 && j < 4 );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprime "true", debido a que las dos condiciones son verdaderas, ya que i es igual 1 y j es menor a 4.  Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> <code>document.writeln( m <= 99 && k < m );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprime "false" ya que k no es menor a m. No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- e -->
+                <li>
+                    <p>
+                        <strong>e)</strong> <code>document.writeln( j >= i || k == m );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprime "true", ya que ambas condiciones son verdaderas, j si es mayor a i y k tiene el mismo valor que m.  No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- f -->
+                <li>
+                    <p>
+                        <strong>f)</strong> <code>document.writeln( k + m < j || k == m );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprime "false", en este caso la suma de k y m es 5 y j vale 2, así que la comparación de 5 < 2 da cómo falso y en la segunada es falsa igualmente, ya que k y m no tienen el mismo valor.  No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- g -->
+                <li>
+                    <p>
+                        <strong>g)</strong> <code>document.writeln( !( k > m ) );</code>
+                    </p>
+                    <ul>
+                        <li> >> Imprime "false", esto porque k si es mayor a m, pero esta condición se ebcuntra negada con !, por lo que devuelve un "false". En este caso si es necesario usar parentesis para hacer la negación con !.</li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </body>
+</html>

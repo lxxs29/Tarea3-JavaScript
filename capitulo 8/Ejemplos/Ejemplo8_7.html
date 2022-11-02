@@ -1,0 +1,47 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 8 -->
+
+<!DOCTYPE html>
+
+<!-- Fig. 8.7: Ejemplo8_5.css -->
+<!-- Uso de la instruccion break en una instrucción for. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Uso de la instruccion break en una instrucción for.</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo VIII</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>8.7</strong> Ejemplo | Uso de la instruccion break en una instrucción for. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           <script>
+                
+                for(var cuenta = 1; cuenta <= 10; ++cuenta){
+                    if(cuenta == 5){
+                        break;
+                    }
+                    document.writeln(cuenta+ " ");
+                }   // fin de for
+
+                document.writeln("<p>Se interrumpió el ciclo en cuenta = "+cuenta+"</p>");
+                
+           </script>
+        </div>
+    </body>
+</html>
