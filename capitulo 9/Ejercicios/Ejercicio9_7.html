@@ -1,0 +1,79 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.7</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+        <script>
+
+            function iniciar(){
+                let boton = document.getElementById("botonCalcular");
+                let campoRadio = document.getElementById("campoRadio");
+                let resultado = document.getElementById("resultado");
+    
+                boton.addEventListener("click", areaCirculo, false);
+            }
+    
+            function areaCirculo(){
+                let area = Math.PI * Math.pow(parseFloat(campoRadio.value), 2);
+    
+                resultado.innerHTML = "El área es: " + area;
+            }
+    
+            window.addEventListener("load", iniciar, false);
+    
+        </script>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.7</strong> Ejercicio | Escriba una secuencia de comandos que use un formulario <em>(form)</em> para obtener el radio de un círculo del usuario y después llame a la función <em>areaCirculo</em> para calcular el área del círculo y mostrar el resultado en un párrafo en la página. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <form action="#">
+                <input type="number" name="Radio" id="campoRadio">
+                <input type="button" value="Calcular área" id="botonCalcular">
+            </form>
+            <p id="resultado"></p>
+
+        </div>
+
+    </body>
+</html>

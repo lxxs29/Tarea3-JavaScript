@@ -1,0 +1,78 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Cálculo del factorial con una función recursiva. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo del factorial con una función recursiva.</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.9</strong> Ejemplo | Cálculo del factorial con una función recursiva. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                var salida = ""; //almacena la salida
+    
+                //calcula los factoriales de 0a 10
+                function calcularFactoriales(){
+                    for ( var i = 0; i <= 10; ++i )
+                        salida += "<p>" + i + "! = " + factorial( i ) + "</p>";
+    
+                    document.getElementById("resultados").innerHTML = salida;
+                } //fin de la función calcularFactoriales
+    
+                //definición recursiva de la función factorial
+                function factorial( numero ){
+                    if( numero <= 1 )//caso base
+                        return 1;
+                    else
+                        return numero * factorial( numero - 1 );
+                } //fin de la función factorial
+    
+                window.addEventListener("load", calcularFactoriales, false);
+            </script>
+            <br><br>
+    
+            <h1>Factoriales de 0 a 10</h1>
+            <div id="resultados"></div>
+        </div>
+    </body>
+</html>

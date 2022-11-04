@@ -1,0 +1,95 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Ejemplo de alcance -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo de alcance.</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.8</strong> Ejemplo | Ejemplo de alcance. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+                var salida; //almacena la cadena a mostrar
+                var x = 1; //variable global
+    
+                function iniciar(){
+                    var x = 5; //variable local para la función iniciar
+    
+                    salida = "<p>la x local en iniciar es " + x + "</p>";
+    
+                    funcionA(); //tiene la x local
+                    funcionB(); //usa la variable globla x
+                    funcionA(); //reinicializa la x local
+                    funcionB(); //la variable global x retiene su valor
+    
+                    salida += "<p class='espacio'>la x local en iniciar es " + x + "</p>";
+    
+                    document.getElementById("resultados").innerHTML = salida;
+                } //fin de la función iniciar
+    
+                function funcionA(){
+                    var x = 25; //se inicializa cada vez que se llama a la funcionA
+    
+                    salida += "<p class='espacio'>la x local en la funcionA es " + x + " después de entrar a funcionA</p>";
+                    ++x;
+                    salida += "<p>la x local en funcionA es " + x + " antes de salir de funcionA</p>";
+                } //fin de funcionA
+    
+                function funcionB(){
+                    salida += "<p class='espacio'>la variable global x es " + x + " al entrar a la funcionB";
+                    x *= 10;
+                    salida += "<p>la variable global x es " + x + " al salir de la funcionB</p>";
+                } //fin de la funcionB
+    
+                window.addEventListener("load", iniciar, false);
+            </script>
+            <br><br>
+    
+            <div onload="iniciar()">
+                <div id="resultados"></div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

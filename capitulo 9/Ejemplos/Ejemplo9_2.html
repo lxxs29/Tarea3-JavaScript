@@ -1,0 +1,74 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Función máximo definida por el programador. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>función máximo definida por el programador</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.2</strong> Ejemplo | Función máximo definida por el programador.
+        <!-- ================================================================ -->
+    </section>
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <script>
+
+                var entrada1 = window.prompt("Escriba el primer número", "0");
+                var entrada2 = window.prompt("Escriba el segundo número", "0");
+                var entrada3 = window.prompt("Escriba el tercer número", "0");
+    
+                var valor1 =parseFloat( entrada1 );
+                var valor2 =parseFloat( entrada2 );
+                var valor3 =parseFloat( entrada3 );
+    
+                var valorMax = maximo(valor1, valor2, valor3);
+    
+                document.writeln("<p>Primer número: " + valor1 + "</p>" + "<p>Segundo número: " + valor2 + "</p>" + "<p>Tercer número: " + valor3 + "</p>" + "<p>El máximo es: " + valorMax + "</p>");
+    
+                //definición de la función maximo (se llama desde la línea 42)
+                function maximo( x, y, z ){
+                    return Math.max( x, Math.max( y, z ) );
+                } //fin de la función maximo
+    
+            </script>
+
+        </div>
+
+    </body>
+</html>

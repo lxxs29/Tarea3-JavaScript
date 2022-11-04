@@ -1,0 +1,157 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!--  -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9.5</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.5</strong> Ejemplo | Dados </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+                <script>
+                    var frecuancia1 = 0;
+                    var frecuancia2 = 0;
+                    var frecuancia3 = 0;
+                    var frecuancia4 = 0;
+                    var frecuancia5 = 0;
+                    var frecuancia6 = 0;
+                    var totalDados = 0;
+        
+                    //registrar el manejador de eventos del botón
+                    function iniciar(){
+                        var boton = document.getElementById("botonTirar");
+                        boton.addEventListener("click", tirarDados, false);
+                    } //fin de la función iniciar
+        
+                    //tirar los datos
+                    function tirarDados(){
+                        var cara; //cara que se tiró
+        
+                        //iterar para tirar el dado 12 veces
+                        for ( var i = 1; i <= 12; ++i ){
+                            cara = Math.floor( 1 + Math.random() * 6 );
+                            sumarTiros( cara ); //incrementa un contador de frecuencia
+                            establecerImagen( i, cara ); // mostrar la imagen del dado apropiado
+                            ++totalDados; //incrementar el total
+                        } //fin del ciclo de tirar dados
+        
+                        actualizarTablaFrecuencias();
+                    } // fin de la función tirarDados
+        
+                    //incrementar el contador de frecuencias apropiado
+                    function sumarTiros( cara ){
+                        switch ( cara ){
+                            case 1:
+                                ++frecuancia1;
+                                break;
+                            case 2:
+                                ++frecuancia2;
+                                break;
+                            case 3:
+                                ++frecuancia3;
+                                break;
+                            case 4:
+                                ++frecuancia4;
+                                break;
+                            case 5:
+                                ++frecuancia5;
+                                break;
+                            case 6:
+                                ++frecuancia6;
+                                break;
+                        } //fin de switch
+                    } //fin de la función sumarTiros
+        
+                    //establecer origen de imagen para un dado
+                    function establecerImagen( numeroDado, cara ){
+                        var imgDado = document.getElementById("dado" + numeroDado);
+                        imgDado.setAttribute("src","img/dado" + cara + ".png");
+                        imgDado.setAttribute("alt", "dado con " + cara + " punto(s)");
+                    } //fin de la función establecerImagen
+        
+                    //actualizar tabla de frecuencias en la página
+                    function actualizarTablaFrecuencias(){
+                        var divTabla = document.getElementById("divTablaFrecuencias");
+                        divTabla.innerHTML = "<table>" +
+                            "<caption>Frecuencias de tiro de los dados</caption>" +
+                            "<thead><th>Cara</th><th>Frecuencia</th>"+
+                            "<th>Porcentaje</th></thead>" + 
+                            "<tbody><tr><td>1</td><td>" + frecuancia1 + "</td><td>" + formatoPorcentaje(frecuancia1 / totalDados) + "</td></tr>" + "<tr><td>2</td><td>"+ frecuancia2 + "</td><td>" + formatoPorcentaje(frecuancia2 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia3 + "</td><td>" + formatoPorcentaje(frecuancia3 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia4 + "</td><td>" + formatoPorcentaje(frecuancia4 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia5 + "</td><td>" + formatoPorcentaje(frecuancia5 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia6 + "</td><td>" + formatoPorcentaje(frecuancia6 / totalDados) + "</td></tr>" + "</tbody></table>";
+                    } //fin de la función actualizarTablaFrecuencias
+        
+                    //aplicar formato al procentaje
+                    function formatoPorcentaje( valor ){
+                        valor *= 100;
+                        return valor.toFixed(2);
+                    } //fin de la función formatoPorcentaje
+        
+                    window.addEventListener("load", iniciar, false);
+                </script>
+                
+                <br><br>
+        
+                <p>
+                    <img src="img/blanco.jpg" alt="imagen de dado 1" id="dado1" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 2" id="dado2" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 3" id="dado3" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 4" id="dado4" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 5" id="dado5" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 6" id="dado6" width="100px" height="100px">
+                </p>
+                <p>
+                    <img src="img/blanco.jpg" alt="imagen de dado 7" id="dado7" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 8" id="dado8" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 9" id="dado9" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 10" id="dado10" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 11" id="dado11" width="100px" height="100px">
+                    <img src="img/blanco.jpg" alt="imagen de dado 12" id="dado12" width="100px" height="100px">
+                </p>
+                <form action="#">
+                    <input type="button" value="Tirar dados" id="botonTirar">
+                </form>
+                <div id="divTablaFrecuencias"></div>
+
+        </div>
+
+    </body>
+</html>

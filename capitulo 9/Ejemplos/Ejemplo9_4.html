@@ -1,0 +1,108 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!--  Generación de imágenes aleatorias de dados usando Math.random. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Números aleatorios.</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.4</strong> Ejemplo |  Generación de imágenes aleatorias de dados usando Math.random. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+           
+        <script>
+            //variables utilizadas para interactuar con los elementos img
+            var imagenDado1;
+            var imagenDado2;
+            var imagenDado3;
+            var imagenDado4;
+
+            //registrar componente de escucha del botón y obtener los elementos img
+            function iniciar(){
+                var boton = document.getElementById("botonTirar");
+                boton.addEventListener("click", tirarDados, false);
+                imagenDado1 = document.getElementById("dado1");
+                imagenDado2 = document.getElementById("dado2");
+                imagenDado3 = document.getElementById("dado3");
+                imagenDado4 = document.getElementById("dado4");
+            } //fin de la función iniciar
+
+            //tirar los dados
+            function tirarDados(){
+                establecerImagen( imagenDado1 );
+                establecerImagen( imagenDado2 );
+                establecerImagen( imagenDado3 );
+                establecerImagen( imagenDado4 );
+            }// fin de la función tirarDados
+
+            //seleccionar el origen de la imagen de un dado
+            function establecerImagen( imgDado ){
+                var valorDado = Math.floor( 1 + Math.random() * 6 );
+                imgDado.setAttribute("src","img/dado" + valorDado + ".png");
+                imgDado.setAttribute("alt","imagen de un dado con " + valorDado + " punto(s)");
+            } //fin de la función establecerImagen
+
+            window.addEventListener("load", iniciar, false);
+            </script>
+            <br><br>
+            <form action="#">
+                <input type="button" value="Tirar dados" id="botonTirar">
+            </form>
+            <ol>
+                <li>
+                    <img src="img/blanco.jpg" alt="Imagen en blanco" id="dado1" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="img/blanco.jpg" alt="Imagen en blanco" id="dado2" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="img/blanco.jpg" alt="Imagen en blanco" id="dado3" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="img/blanco.jpg" alt="Imagen en blanco" id="dado4" width="100px" height="100px">
+                </li>
+            </ol>
+
+        </div>
+
+    </body>s
+</html>

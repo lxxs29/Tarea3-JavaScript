@@ -1,0 +1,126 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.17</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function inicar(){
+                let botonC = document.getElementById("calcularC");
+                let botonF = document.getElementById("calcularF");
+                let campoC = document.getElementById("campoC");
+                let campoF = document.getElementById("campoF");
+                let resultado = document.getElementById("resultado");
+    
+                botonC.addEventListener("click", mostrarC, false);
+                botonF.addEventListener("click", mostrarF, false);
+            }
+    
+            function mostrarC(){
+                let fahrenheit = parseFloat(campoF.value);
+    
+                resultado.innerHTML = "ºCelsius &rArr; " + Celsius(fahrenheit).toFixed(4);
+    
+            }
+            function mostrarF(){
+                let celsius = parseFloat(campoC.value);
+    
+                resultado.innerHTML = "ºFahrenheit &rArr; " + Fahrenheit(celsius).toFixed(4);
+    
+            }
+    
+            function Celsius(F){
+                return (5.0 / 9.0) * (F - 32);
+            }
+    
+            function Fahrenheit(C){
+                return (9.0 / 5.0) * (C + 32);
+            }
+    
+            window.addEventListener("load", inicar, false);
+        </script>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.17</strong> Ejercicio | Implemente las siguientes funciones: </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <ol>
+                
+                <li>
+                    La función <b>Celsius</b> devuelve el equivalente en <em>Celsius</em> de una temperatura en <em>Fahrenheit</em>, mediante el cálculo: <br>
+                    <em>C = 5.0 / 9.0 * ( F - 32 )</em>;
+                </li>
+                <p>
+                    <b>function</b> Celsius(F){ <br>
+                    &emsp;return (5.0 / 9.0) * (F - 32); <br>
+                    }
+                </p>
+            
+                <li>
+                    La función <b>Fahrenheit</b> devuelve el equivalente en <em>Fahrenheit</em> de una temperatura en <em>Celsius</em>, mediante el cálculo: <br>
+                    <em>F = 9.0 / 5.0 * C + 32</em>;
+                </li>
+                <p>
+                    <b>function</b> Fahrenheit(C){ <br>
+                    &emsp;return (9.0 / 5.0) * (C + 32); <br>
+                    }
+                </p>
+            
+                <li>
+                    Use esta funciones para escribir una secuencia de comandos que permita al usuario introducir una temperatura en Fahrenheit o Celsius y muestre el equivalente en Celsius o Fahrenheit.
+                    <form action="#">
+                        <label for="Fahrenheit">Fahrenheit</label>
+                        <input type="number" name="Fahrenheit" id="campoF">
+                        <input type="button" value="Convertir a Celsius" id="calcularC">
+
+                        <label for="Celsius">Celsius</label>
+                        <input type="number" name="Celsius" id="campoC">
+                        <input type="button" value="Convertir a Fahrenheit" id="calcularF">
+                        
+                    </form>
+                </li>
+                <p id="resultado">
+                </p>    
+            </ol>
+        </div>
+    </body>
+</html>

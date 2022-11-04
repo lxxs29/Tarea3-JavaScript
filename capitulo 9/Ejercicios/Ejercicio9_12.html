@@ -1,0 +1,102 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.12</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function iniciar(){
+                let botonA = document.getElementById("botonA");
+                let botonB = document.getElementById("botonB");
+                let botonC = document.getElementById("botonC");
+    
+                let resA = document.getElementById("resA");
+                let resB = document.getElementById("resB");
+                let resC = document.getElementById("resC");
+    
+                botonA.addEventListener("click", numeroA, false);
+                botonB.addEventListener("click", numeroB, false);
+                botonC.addEventListener("click", numeroC, false);
+            }
+    
+            function numeroA(){
+                resA.innerHTML = "Numero &rArr; " + (Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2);
+            }
+            
+            function numeroB(){
+                resB.innerHTML = "Numero &rArr; " + (Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2 + 1);
+            }
+    
+            function numeroC(){
+                resC.innerHTML = "Numero &rArr; " + (Math.ceil((Math.random() * (22 - 6 + 1) + 6) / 4) * 4 - 2);
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.12</strong> Ejercicio | Para cada uno de los siguientes conjuntos de enteros, escriba una sola instrucción que imprima un número al azar del conjunto: </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <ol>
+                
+                <li>2, 4, 6, 8, 10.</li>
+                <p class="respuesta">
+                    n = Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2; <br> 
+                </p>
+                <input type="button" value="Número" id="botonA">
+                <p id="resA"></p> 
+                <li>3, 5, 7, 9, 11.</li>
+                <p class="respuesta">
+                    n = Math.floor((Math.random() * (10 - 2 + 1) + 2) / 2) * 2 + 1;
+                </p>        
+                <input type="button" value="Número" id="botonB">
+                <p id="resB"></p>
+                <li>6, 10, 14, 18, 22.</li>
+                <p class="respuesta">
+                    n = Math.ceil((Math.random() * (22 - 6 + 1) + 6) / 4) * 4 - 2;
+                </p>
+                <input type="button" value="Número" id="botonC">
+                <p id="resC"></p>
+            </ol>
+        </div>
+    </body>
+</html>

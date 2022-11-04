@@ -1,0 +1,68 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Página Web que muestra un video de las reglas básicas para el juego de dados Craps -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reglas básicas para el juego de dados Craps</title>
+        <link rel="stylesheet" href="styles/styles-ejem.css">
+        <style>
+            video{
+                position: relative;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                width: 500px;
+            }
+        </style>
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejemplos</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.7</strong> Ejemplo | Página Web que muestra un video de las reglas básicas para el juego de dados Craps. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <video controls>
+                <source src="videos/craps-rules.mp4" type="video/mp4">
+                Un jugador tira dos dados. Cada dado tiene seis caras que contienen uno, dos, tres, cuatro, cinco y seis puntos, respectivamente. Se calcula la suma de los puntos en las dos caras superiores. Si la suma es 7 u 11 en el primer lanzamiento, el jugador gana. Si la suma es 2, 3 o 12 en el primer lanzamiento (lo que se llama "craps"), el jugador pierde (es decir, la "casa" gana). Si la suma es 4, 5, 6, 8, 9 o 10 en el primer lanzamiento, esa suma se convierte en el "punto" del jugador. Para ganar, debe seguir tirando los dados hasta que "salga su punto" (es decir, tire su valor de punto). Si tira un 7 antes de sacar el punto, pierde.
+            </video>
+
+        </div>
+
+    </body>
+</html>

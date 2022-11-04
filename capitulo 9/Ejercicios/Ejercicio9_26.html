@@ -1,0 +1,134 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.26</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            let botonAdivinar, botonReiniciar, numero_aleatorio, intentos = 1;
+    
+            function iniciar(){
+                botonAdivinar = document.getElementById("adivinar");
+                botonReiniciar = document.getElementById("reiniciar");
+                let campoNumero = document.getElementById("campoNumero");
+                let mensajeFinal = document.getElementById("mensajeFinal");
+                let mensajeSuerte = document.getElementById("mensajeSuerte");
+    
+                generarNumero();
+    
+                botonAdivinar.addEventListener("click", validar, false);
+                botonReiniciar.addEventListener("click", reload, false);
+            }
+    
+            function reload(){
+                botonAdivinar.disabled = false;
+                botonReiniciar.disabled = true;
+                campoNumero.value = "";
+                mensajeFinal.innerHTML = "";
+                intentos = 0;
+                mensajeSuerte.innerHTML = "";
+                generarNumero();
+            }
+    
+            function generarNumero(){
+                numero_aleatorio = Math.floor(Math.random() * (1000 - 1 + 1) + 1 );
+                console.log(numero_aleatorio);
+            }
+            function validar(){
+                let numero_usuario = parseInt(campoNumero.value);
+                switch(true){
+                    case numero_usuario == numero_aleatorio:
+                        mensajeFinal.innerHTML = "Felicidades. ¡Adivinó el número!";
+                        botonAdivinar.disabled = true;
+                        botonReiniciar.disabled = false;
+                        mostrarIntentos();
+                        break;
+                    case numero_usuario < numero_aleatorio:
+                        mensajeFinal.innerHTML = "Demasiado Bajo. Intente de nuevo.";
+                        campoNumero.value = "";
+                        intentos++;
+                        break;
+                    case numero_usuario > numero_aleatorio:
+                        mensajeFinal.innerHTML = "Demasiado alto. Intente de nuevo.";
+                        campoNumero.value = "";
+                        intentos++;
+                        break;
+                    default:
+                        mensajeFinal.innerHTML = "Introduzca un valor válido.";
+                        campoNumero.value = "";
+                        break;
+                }
+            }
+    
+            function mostrarIntentos(){
+                switch(true){
+                    case intentos < 10:
+                        mensajeSuerte.innerHTML = "¡Conoce el secreto o tuvo suerte!";
+                        break;
+                    case intentos == 10:
+                        mensajeSuerte.innerHTML = "¡Entonces si conoce el secreto!";
+                        break;
+                    case intentos > 10:
+                        mensajeSuerte.innerHTML = "¡Debería poder hacerlo mejor!";
+                        break;
+                }
+            }
+    
+            window.addEventListener("load", iniciar, false);
+    
+        </script>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.26</strong> Ejercicio | Modifique el programa del ejercicio 9.25 para que cuente el número de intentos realizados por el jugador. Si el número es menor a 10, muestre <em>¡Conoce el secreto o tuvo suerte!</em> Si el jugador adivina el número en 10 intentos, muestre <em>¡Entonces si conoce el secreto!</em> Si el jugador realiza más de 10 intentos, muestre <em>¡Debería poder hacerlo mejor!</em> ¿Por qué no debe tomar más de 10 intentos? Bueno, con cada intento correcto, el jugador debería ser capaz de eliminar la mitad los números. Ahora muestre por qué es posible adivinar cualquier número entre 1 y 1000 en 10 intentos o menos. </p>
+        </section>
+        <!-- ================================================================ -->
+
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <p>Adivine un número entre 1 y 1000:</p>
+            <form action="#">
+                <input type="number" name="Numero" id="campoNumero">
+                <input type="button" value="Adivinar" id="adivinar">
+                <input type="button" value="Reiniciar" id="reiniciar" disabled>
+            </form>
+            <p id="mensajeFinal"></p>
+            <h3 id="mensajeSuerte"></h3>
+        </div>
+    </body>
+</html>

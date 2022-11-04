@@ -1,0 +1,87 @@
+<!-- Miguel Conde Luis -->
+<!-- Capitulo 9 -->
+
+<!DOCTYPE html>
+
+<!-- Mostrar una línea de texto. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.9</title>
+        <link rel="stylesheet" href="styles/styles-ejer.css">
+        <style type="text/css">
+            .boton{
+                font-size: 18px;
+                padding: 15px;
+                color: #fff;
+                border: 1px solid rgb(0, 0, 0);
+                background-color:rebeccapurple;
+                border-radius: 5px;
+                font: inherit;
+                position: fixed;
+                top: 2em;
+            }
+            .boton:hover{
+                border: 3px solid rebeccapurple;
+                background-color:  rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        </style>
+        <script>
+
+            function iniciar(){
+                let boton = document.getElementById("calcular");
+                let campox1 = document.getElementById("campox1");
+                let campoy1 = document.getElementById("campoy1");
+                let campox2 = document.getElementById("campox2");
+                let campoy2 = document.getElementById("campoy2");
+                let resultado = document.getElementById("resultado");
+                boton.addEventListener("click", distancia, false);
+            }
+            function distancia(){
+                let x1 = parseFloat(campox1.value);
+                let y1 = parseFloat(campoy1.value);   
+                let x2 = parseFloat(campox2.value);
+                let y2 = parseFloat(campoy2.value);
+                let powX = Math.pow((x2 - x1), 2);
+                let powY = Math.pow((y2 - y1), 2);
+                let hipotenusa = Math.sqrt(powX + powY);
+                resultado.innerHTML = "La distancia es: " + hipotenusa + " unidades.";
+            }
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <!-- Banner para mostrar el titulo -->
+        <header class="gradient">
+            <!-- Botón para regresar al inicio -->
+            <a href="../../index.html">
+                <label>
+                    <input type="submit" name="regresar" id="menu" class="boton" value="Regresar">
+                </label>
+            </a>
+            <h1 class="titulo"><strong>Ejercicios</strong> | Cap&iacute;tulo IX</h1>
+            <h4 class="nombre">Miguel Conde Luis | 197O01086</h4>   
+        </header>
+        <!-- Contenedor de información de la sección -->
+        <section class="cont-1">
+            <p><strong>9.9</strong> Ejercicio | Escriba una función llamada <em>distancia</em>, que calcule la distancia entre dos puntos (x<sub>1</sub>, y<sub>1</sub>) y (x<sub>2</sub>, y<sub>2</sub>). Todos los números y valores de retorno deben ser valores de punto flotante. Incorpore esta función en una secuencia de comandos que permita al usuario introducir las coordenadas de los puntos mediante un formulario de HTML5. </p>
+        </section>
+        <!-- ================================================================ -->
+        <div class="cont-2">
+            <!-- -------------------<<JavaScript>>------------------- -->
+            <form action="#">
+                <label for="x1">x<sub>1</sub></label>
+                <input type="number" name="x1" id="campox1"> <br>     
+                <label for="y1">y<sub>1</sub></label>
+                <input type="number" name="y1" id="campoy1"> <br>         
+                <label for="x2">x<sub>2</sub></label>
+                <input type="number" name="x2" id="campox2"> <br>               
+                <label for="y2">y<sub>2</sub></label> 
+                <input type="number" name="y2" id="campoy2"> <br><br>
+                <input type="button" value="Calcular distancia" id="calcular">
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </body>
+</html>
